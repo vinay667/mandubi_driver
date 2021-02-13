@@ -1,0 +1,181 @@
+name: mandubi_driver
+description: A new Flutter application.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^0.1.3
+  provider: ^2.0.0
+  flutter_dash: ^0.0.1
+  country_code_picker: ^1.4.0
+  percent_indicator: ^2.1.9
+  flutter_polyline_points: ^0.1.0
+  google_maps_flutter: ^0.5.33
+  flutter_calendar_carousel: ^1.5.2
+  intl: ^0.16.1
+  cached_network_image: ^2.2.0+1
+  dio: ^3.0.9
+  image_picker: ^0.6.7+4
+  url_launcher: ^5.5.0
+  geolocator: ^6.1.13
+  connectivity: ^0.4.2
+  permission_handler: ^5.0.1+1
+  toast: ^0.1.5
+  http: ^0.12.0+4
+  shared_preferences: ^0.5.7+3
+  pinput: ^1.0.0
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - images/splash_icon.png
+    - images/login_row.png
+    - images/del_bike.png
+    - images/log1.png
+    - images/log2.png
+    - images/log3.png
+    - images/finger_icon.png
+    - images/gallery_ic.png
+    - images/hamg.png
+    - images/del_nav.png
+    - images/orders_ic.png
+    - images/dum_profile.jpg
+    - images/status_ic.png
+    - images/map_path_ic.png
+    - images/pwd_ic.png
+    - images/earnings_ic.png
+    - images/van_ic.png
+    - images/clock_ic.png
+    - images/dum_men.jpg
+    - images/history.png
+    - images/acc_nav.png
+    - images/date_ic.png
+    - images/settings_nav.png
+    - images/help_nav.png
+    - images/ques_nav.png
+    - images/edit_profile.png
+    - images/power_nav.png
+    - images/home_bt.png
+    - images/settings_bt.png
+    - images/notification_bt.png
+    - images/filter_bt.png
+    - images/profile_bt.png
+    - images/back_ic.png
+    - images/thumbs_up.png
+    - images/thumbs_down.png
+    - images/loc_wh.png
+    - images/black_bike.png
+    - images/black_check.png
+    - images/loc_red.png
+    - images/back_right.png
+    - images/check_green.png
+    - images/radio_wal.png
+    - images/wallet_blue.png
+    - images/wallet_yellow.png
+    - images/phone_wl.png
+    - images/back_blue.png
+    - images/close_ic.png
+    - images/cap_ic.png
+    - images/calender_ic.png
+    - images/forgot_ic.png
+    - images/amount_ic.png
+    - images/dl_ic.jpg
+    - images/search_ic.png
+    - images/help_image.png
+    - images/customer_support.png
+    - images/loc_pink.png
+    - images/cross_rect.png
+    - images/pie_ic.png
+    - images/settings_im.png
+    - images/lock_ic.png
+    - images/not_or.png
+    - images/call_ic.png
+    - images/loc_white.png
+    - images/distance.png
+    - images/flag_ic.png
+    - images/bank_ic.png
+    - images/calc_ic.png
+    - images/car_icon.png
+    - images/loc_or.png
+    - images/flot.png
+    - images/otp_imag.png
+    - images/map_dum.jpg
+    - assets/map_style.txt
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  fonts:
+    - family: Lato
+      fonts:
+        - asset: fonts/LatoRegular.ttf
+        - asset: fonts/LatoExtraBold.ttf
+          weight: 800
+        - asset: fonts/LatoBold.ttf
+          weight: 700
+        - asset: fonts/LatoSemiBold.ttf
+          weight: 600
+        - asset: fonts/LatoLight.ttf
+          weight: 500
+
+
+    - family: Roboto
+      fonts:
+        - asset: fonts/RobotoRegular.ttf
+        - asset: fonts/RobotoBlack.ttf
+          weight: 900
+        - asset: fonts/RobotoBold.ttf
+          weight: 700
+        - asset: fonts/RobotoMedium.ttf
+          weight: 600
+        - asset: fonts/RobotoMedium.ttf
+          weight: 500
+
+
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages

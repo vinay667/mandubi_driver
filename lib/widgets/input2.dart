@@ -1,0 +1,124 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:mandubi_driver/colors/colors.dart';
+
+class TextInput2 extends StatefulWidget {
+  final String labelText;
+  final Function onSaved;
+  final Function validator;
+  final TextInputType keyboardType;
+  final bool obscureText;
+  final Widget prefixIcon;
+  String text; FocusNode focusNode;
+  Function onTapTrigger;
+  var controller;
+
+
+  TextInput2({
+    this.labelText,
+    this.onSaved,
+    this.validator,
+    this.keyboardType,
+    this.obscureText: false,
+    this.prefixIcon,
+    this.text,
+    this.focusNode, this.onTapTrigger,
+    this.controller
+
+  });
+
+  @override
+  _TextInputState createState() => _TextInputState();
+}
+
+class _TextInputState extends State<TextInput2> {
+  FocusNode myFocusNode = new FocusNode();
+  TextEditingController controller;
+
+  @override
+  void initState() {
+    super.initState();
+    controller ??= TextEditingController();
+    controller.text = widget.text ?? '';
+  }
+
+  @override
+  Widget build(BuildContext context) {
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+      Stack(
+        children: <Widget>[
+
+
+
+          Container(
+            //  height: 58,
+            child: TextFormField(
+              // textAlign: TextAlign.center,
+              validator: widget.validator,
+              obscureText: widget.obscureText,
+              onTap: widget.onTapTrigger,
+              focusNode: widget.focusNode,
+              controller: widget.controller,
+              style: TextStyle(
+                  fontSize: 18.0,
+                  color: MyColor.defaultTextColor,
+                  fontFamily: 'Roboto',
+                  fontWeight: FontWeight.w500),
+              decoration: new InputDecoration(
+                labelText: widget.labelText,
+                prefixIcon: widget.prefixIcon,
+                labelStyle: TextStyle(
+                 color: widget.focusNode.hasFocus
+                ? MyColor.defaultTextColor
+                    : Color.fromRGBO(128,128,128,1),
+                fontFamily: 'Roboto',
+                  fontWeight: FontWeight.w500,
+                  fontSize: widget.focusNode.hasFocus?22:16,
+                ),
+                fillColor: Colors.white,
+                //  contentPadding: EdgeInsets.only(top: 10,bottom: 10,right: 10,left: 20),
+                contentPadding: EdgeInsets.only(left: 30,right: 20,top: 27,bottom: 10),
+                enabledBorder: new OutlineInputBorder(
+                  borderRadius: new BorderRadius.circular(10.0),
+                  borderSide: new BorderSide(
+                      color: MyColor.borderColor, width: 1.5),
+                ),
+                focusedBorder: new OutlineInputBorder(
+                  borderRadius: new BorderRadius.circular(10.0),
+                  borderSide:
+                  new BorderSide(color: MyColor.borderColor, width: 1.5),
+                ),
+
+                focusedErrorBorder: new OutlineInputBorder(
+                  borderRadius: new BorderRadius.circular(10.0),
+                  borderSide:
+                  new BorderSide(color: Colors.red, width: 1),
+                ),
+                errorBorder: new OutlineInputBorder(
+                  borderRadius: new BorderRadius.circular(10.0),
+                  borderSide:
+                  new BorderSide(color: Colors.red, width: 1),
+                ),
+                disabledBorder: new OutlineInputBorder(
+                  borderRadius: new BorderRadius.circular(10.0),
+                  borderSide:
+                  new BorderSide(color: MyColor.textFiledInActiveColor, width: 1),
+                ),
+                //fillColor: Colors.green
+              ),
+              keyboardType: TextInputType.number,
+            ),
+          ),
+
+
+        ],
+      )
+
+
+      ],
+    );
+  }
+}
